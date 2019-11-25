@@ -1,0 +1,47 @@
+plugins {
+  id 'java'
+  id 'application'
+  id "io.freefair.lombok" version "4.1.4"
+}
+
+repositories {
+  jcenter()
+}
+
+sourceCompatibility = 1.8
+
+application {
+  mainClassName = 'com.example.minibroker.App'
+}
+
+ext {
+  rsocketVersion = '1.0.0-RC5'
+  jacksonVersion = '2.8.11'
+}
+
+dependencies {
+  implementation 'org.slf4j:slf4j-api:1.7.29'
+  implementation 'ch.qos.logback:logback-classic:1.2.3'
+  implementation 'ch.qos.logback:logback-core:1.2.3'
+
+  implementation 'com.google.guava:guava:28.0-jre'
+  implementation 'com.google.inject:guice:4.2.2'
+  implementation 'org.apache.commons:commons-lang3:3.8.1'
+  implementation 'commons-cli:commons-cli:1.2'
+  implementation 'org.apache.commons:commons-math3:3.6.1'
+  implementation 'joda-time:joda-time:2.9.7'
+
+  implementation "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+  implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+  implementation "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
+
+  implementation 'io.projectreactor:reactor-core:3.2.11.RELEASE'
+  implementation "io.rsocket:rsocket-core:${rsocketVersion}"
+  implementation "io.rsocket:rsocket-transport-netty:${rsocketVersion}"
+
+  testImplementation 'org.testng:testng:6.14.3'
+}
+
+test {
+  useTestNG()
+}

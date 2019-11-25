@@ -1,0 +1,29 @@
+<h1>Hello, {{you}}!</h1>
+<hr>
+<h2>RPC</h2>
+<div class="row">
+  <div class="col-12">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="target">TARGET</span>
+      </div>
+      <input [(ngModel)]="target" type="text" class="form-control" placeholder="Peer" aria-label="Peer"
+             aria-describedby="target">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="method">METHOD</span>
+      </div>
+      <input [(ngModel)]="method" type="text" class="form-control" placeholder="Method" aria-label="Method"
+             aria-describedby="method">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="args">ARGS</span>
+      </div>
+      <input [(ngModel)]="args" type="text" class="form-control" placeholder="Args" aria-label="Args"
+             aria-describedby="args">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="execute()">EXECUTE</button>
+  </div>
+</div>
