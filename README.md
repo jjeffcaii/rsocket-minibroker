@@ -14,7 +14,7 @@ $ ./gradlew run
 $ cd web
 $ ng serve
 ```
-3. Open http://localhost:8080/
+3. Open http://localhost:4200/
 
 ### Other
 
